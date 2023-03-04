@@ -29,9 +29,9 @@ public class ViewRecipe {
                 case "1" -> listAllRecipes();
                 case "2" -> seeRecipe();     
                 case "3" -> addRecipe();
-                case "4" -> ModifyRecipe();
-                case "5" -> DeleteRecipe();
-                case "exit" -> back();
+                case "4" -> modifyRecipe();
+                case "5" -> deleteRecipe();
+                case "6" -> back();
                 default -> System.out.println("rien du tout");
             }
         }
@@ -49,14 +49,14 @@ public class ViewRecipe {
         
     }
     
-    public void ModifyRecipe(){
+    public void modifyRecipe(){
         
     }
     
-    public void DeleteRecipe(){
+    public void deleteRecipe(){
         
     }
-    public void Back(){
-        
+    public void back(){
+        ViewMain returnMain = new ViewMain();
     }
 }
