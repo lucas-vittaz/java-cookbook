@@ -4,9 +4,6 @@
  */
 package model;
 
-import cookbook.model.Ingredient;
-import java.util.List;
-
 /**
  *
  * @author lucas
@@ -14,15 +11,15 @@ import java.util.List;
 public class Recipe {
     private int id;
     private String name;
-    private List<Ingredient> ingredients;
+    // private List<Ingredient> ingredients;
     private String description;
     private String cookingTime;
     private String preparationTime;
     
     // constructor
-    public Recipe(String name, List<Ingredient> ingredients, String description, String cookingTime, String preparationTime) {
+    public Recipe(String name, String description, String cookingTime, String preparationTime) {
         this.name = name;
-        this.ingredients = ingredients;
+       // this.ingredients = ingredients;
         this.description = description;
         this.cookingTime = cookingTime;
         this.preparationTime = preparationTime;
@@ -37,9 +34,9 @@ public class Recipe {
         return this.name;
     }
 
-    public List<Ingredient> getIngredients() {
-        return this.ingredients;
-    }
+    // public List<Ingredient> getIngredients() {
+    //    return this.ingredients;
+    // }
     
     public String getDescription(){
         return this.description;
@@ -62,9 +59,9 @@ public class Recipe {
         this.name = name;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
-    }
+    // public void setIngredients(List<Ingredient> ingredients) {
+       // this.ingredients = ingredients;
+    //}
     
     public void setDescription(String description){
         this.description = description;
@@ -77,15 +74,20 @@ public class Recipe {
         this.preparationTime = preparationTime;
     }
     
+    // public void addIngredient(Ingredient ingredient) {
+       // this.ingredients.add(ingredient);
+    //}
+
     public void displayRecipe(){
         System.out.println("""
-                Recette : 
+                Recipe : 
                 - ID : """ + this.id + "\n" 
                 + "Title :  " + this.name + "\n" 
-                + "Ingredients : " + this.ingredients + "\n" 
+               // + "Ingredients : " + this.ingredients + "\n" 
                 + "Description : " + this.description + "\n" 
                 + "Cooking time : " + this.cookingTime + "\n" 
                 + "preparation time : " + this.preparationTime
+                + "\n" + "\n"
         );
     }
     
