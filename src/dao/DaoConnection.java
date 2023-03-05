@@ -19,7 +19,6 @@ public class DaoConnection {
         try {
             Class.forName ("com.mysql.cj.jdbc.Driver");
             this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", "root");
-            System.out.println("Database connected !");
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println(ex.getMessage());
         }
